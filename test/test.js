@@ -13,7 +13,7 @@ describe('test timeout', function () {
       setTimeout(() => {
         resolve(1)
       }, 0.5 * 1000)
-    }, 1 * 1000) // this task will break after 3 secs
+    }, 1 * 1000) // this task will break after 1 secs
     const r = await p
     assert(r === 1)
   })
@@ -23,7 +23,7 @@ describe('test timeout', function () {
       setTimeout(() => {
         resolve(1)
       }, 1.5 * 1000)
-    }, 1 * 1000) // this task will break after 3 secs
+    }, 1 * 1000) // this task will break after 1 secs
 
     try {
       await p
