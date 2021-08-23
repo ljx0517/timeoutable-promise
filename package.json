@@ -1,6 +1,6 @@
 {
   "name": "timeoutable-promise",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "simple promise wrapper,support timeout",
   "scripts": {
     "test": "standard && mocha test",
@@ -8,7 +8,8 @@
     "lint": "standard"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "standard": {
     "parser": "babel-eslint",
