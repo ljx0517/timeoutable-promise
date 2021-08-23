@@ -1,6 +1,6 @@
 {
   "name": "timeoutable-promise",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple promise wrapper,support timeout",
   "scripts": {
     "test": "standard && mocha test",
