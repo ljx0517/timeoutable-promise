@@ -1,0 +1,33 @@
+{
+  "name": "timeoutable-promise",
+  "version": "1.0.0",
+  "description": "simple promise wrapper,support timeout",
+  "scripts": {
+    "test": "standard && mocha test",
+    "test-browser": "browserify test/index.js > test/bundle.js && echo \"open test/index.html in your browser\"",
+    "travis": "standard && istanbul cover test --report lcovonly && cat coverage/lcov.info | coveralls",
+    "travis-ts": "tsc test/typescript.ts --m System --out /dev/null && echo 'TypeScript compilation passed.'",
+    "example": "node example",
+    "lint": "standard"
+  },
+  "files": [
+    "index.js"
+  ],
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [ "describe", "it" ],
+    "env": [
+      "mocha"
+    ]
+  },
+  "repository": "",
+  "author": "louis jaxon <ljx0517@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "standard": "^16.0.3",
+    "babel-eslint": "^10.1.0"
+  }
+}
