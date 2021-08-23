@@ -9,7 +9,7 @@ function isTimeoutError (err) {
   return err instanceof TimeoutError
 }
 
-class TimerPromise {
+class TimeoutablePromise {
   promise = null
   timeout = null
   timerId = null
@@ -46,7 +46,7 @@ class TimerPromise {
 }
 
 module.exports = {
-  TimerPromise,
+  TimeoutablePromise,
   TimeoutError,
   isTimeoutError
 }

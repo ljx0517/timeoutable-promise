@@ -2,13 +2,13 @@
 const chai = require('chai')
 const assert = chai.assert
 const {
-  TimerPromise,
+  TimeoutablePromise,
   TimeoutError
 } = require('../index')
 
 describe('test timeout', function () {
   it('return before timeout', async function () {
-    const p = new TimerPromise((resolve, reject) => {
+    const p = new TimeoutablePromise((resolve, reject) => {
       // wait 2 secs resolve the promise
       setTimeout(() => {
         resolve(1)
@@ -18,7 +18,7 @@ describe('test timeout', function () {
     assert(r === 1)
   })
   it('return after timeout', async function () {
-    const p = new TimerPromise((resolve, reject) => {
+    const p = new TimeoutablePromise((resolve, reject) => {
       // wait 2 secs resolve the promise
       setTimeout(() => {
         resolve(1)
